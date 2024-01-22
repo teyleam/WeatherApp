@@ -20,7 +20,39 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Mostly Cloudy"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="48dp"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/cloudy_sunny"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mon Jun 17 | 10:00 AM"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="25°"
+                android:textSize="63sp"
+                android:textColor="@color/text_color"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
