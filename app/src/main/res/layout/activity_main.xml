@@ -28,11 +28,11 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/cloudy_sunny"
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:layout_gravity="center"/>
+                android:src="@drawable/cloudy_sunny" />
 
             <TextView
                 android:id="@+id/textView2"
