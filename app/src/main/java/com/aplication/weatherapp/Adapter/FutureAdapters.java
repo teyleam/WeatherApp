@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aplication.weatherapp.Domains.FutureDomain;
 import com.aplication.weatherapp.Domains.Hourly;
 import com.aplication.weatherapp.R;
 import com.bumptech.glide.Glide;
@@ -17,10 +18,10 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 public class FutureAdapters extends RecyclerView.Adapter<FutureAdapters.viewHolder> {
-    ArrayList<Hourly> items;
+    ArrayList<FutureDomain> items;
     Context context;
 
-    public FutureAdapters(ArrayList<Hourly> items) {
+    public FutureAdapters(ArrayList<FutureDomain> items) {
         this.items = items;
     }
 
@@ -34,8 +35,7 @@ public class FutureAdapters extends RecyclerView.Adapter<FutureAdapters.viewHold
 
     @Override
     public void onBindViewHolder(@NonNull FutureAdapters.viewHolder holder, int position) {
-    holder.hourTxt.setText(items.get(position).getHour());
-    holder.tempTxt.setText(items.get(position).getTemp()+ "°");
+
 
     int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getPicPath(),
             "drawable",holder.itemView.getContext().getPackageName());
