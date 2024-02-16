@@ -22,6 +22,10 @@ public class FutureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_future);
         
         initRecyclerView();
+        setVariable();
+    }
+
+    private void setVariable() {
     }
 
     private void initRecyclerView() {
