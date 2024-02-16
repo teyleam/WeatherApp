@@ -36,6 +36,10 @@ public class FutureAdapters extends RecyclerView.Adapter<FutureAdapters.viewHold
     @Override
     public void onBindViewHolder(@NonNull FutureAdapters.viewHolder holder, int position) {
 
+        holder.dayTxt.setText(items.get(position).getDay());
+        holder.statusTxt.setText(items.get(position).getStatus());
+        holder.highTxt.setText(items.get(position).getHighTemp());
+        holder.lowTxt.setText(items.get(position).getLowTemp());
 
     int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getPicPath(),
             "drawable",holder.itemView.getContext().getPackageName());
@@ -51,13 +55,15 @@ public class FutureAdapters extends RecyclerView.Adapter<FutureAdapters.viewHold
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
-        TextView hourTxt, tempTxt;
+        TextView dayTxt, statusTxt, lowTxt, highTxt;
         ImageView pic;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
-            hourTxt = itemView.findViewById(R.id.hourTxt);
-            tempTxt = itemView.findViewById(R.id.tempTxt);
+            dayTxt = itemView.findViewById(R.id.dayTxt);
+            statusTxt = itemView.findViewById(R.id.statusTxt);
+            lowTxt = itemView.findViewById(R.id.lowTxt);
+            highTxt = itemView.findViewById(R.id.highTxt);
             pic = itemView.findViewById(R.id.pic);
         }
     }
