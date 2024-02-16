@@ -38,5 +38,6 @@ public class FutureActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false));
 
         adapterTommorow = new FutureAdapters(items);
+        recyclerView.setAdapter(adapterTommorow);
     }
 }
