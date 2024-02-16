@@ -1,10 +1,12 @@
 package com.aplication.weatherapp.Activitis;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.aplication.weatherapp.Adapter.FutureAdapters;
 import com.aplication.weatherapp.Domains.FutureDomain;
 import com.aplication.weatherapp.R;
 
@@ -12,7 +14,7 @@ import java.util.ArrayList;
 
 public class FutureActivity extends AppCompatActivity {
     
-    private RecyclerView adapterTommorow;
+    private RecyclerView.Adapter adapterTommorow;
     public RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +34,9 @@ public class FutureActivity extends AppCompatActivity {
         items.add(new FutureDomain("Wen", "sun","Sunny",28,10));
         items.add(new FutureDomain("Thu", "rainy","Rainy",23,1));
 
+        recyclerView = findViewById(R.id.view2);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false));
+
+        adapterTommorow = new FutureAdapters(items);
     }
 }
