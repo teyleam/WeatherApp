@@ -38,8 +38,8 @@ public class FutureAdapters extends RecyclerView.Adapter<FutureAdapters.viewHold
 
         holder.dayTxt.setText(items.get(position).getDay());
         holder.statusTxt.setText(items.get(position).getStatus());
-        holder.highTxt.setText(items.get(position).getHighTemp());
-        holder.lowTxt.setText(items.get(position).getLowTemp());
+        holder.highTxt.setText(items.get(position).getHighTemp()+"°");
+        holder.lowTxt.setText(items.get(position).getLowTemp()+"°");
 
     int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getPicPath(),
             "drawable",holder.itemView.getContext().getPackageName());
