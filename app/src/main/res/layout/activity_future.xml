@@ -215,8 +215,9 @@
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:nestedScrollingEnabled="true"
-                android:layout_weight="1"/>
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="true" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
