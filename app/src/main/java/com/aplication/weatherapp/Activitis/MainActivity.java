@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initRecyclerview();
+        setVariable();
+    }
+
+    private void setVariable() {
     }
 
     private void initRecyclerview() {
