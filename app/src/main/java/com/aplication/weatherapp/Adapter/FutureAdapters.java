@@ -28,7 +28,7 @@ public class FutureAdapters extends RecyclerView.Adapter<FutureAdapters.viewHold
     @NonNull
     @Override
     public FutureAdapters.viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_hourly, parent, false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_future, parent, false);
         context = parent.getContext();
         return new viewHolder(inflate);
     }
