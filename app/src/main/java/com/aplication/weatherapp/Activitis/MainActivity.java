@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.aplication.weatherapp.Adapter.HourlyAdapters;
 import com.aplication.weatherapp.Domains.Hourly;
@@ -25,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setVariable() {
+        TextView nextBtn = findViewById(R.id.nextBtn);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FutureActivity.class));
+            }
+        });
     }
 
     private void initRecyclerview() {
